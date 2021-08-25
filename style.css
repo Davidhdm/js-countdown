@@ -1,0 +1,9 @@
+body{
+  margin: 0;
+}
+
+#app {
+  height: 100vh;
+  background-position: bottom;
+  background-image: url('img/bns-background.jpg');
+}
