@@ -21,15 +21,36 @@ body {
     rgba(255, 116, 10, 0.75) 0%,
     rgba(255, 157, 82, 0) 100%
   );
-  padding: 50px 100px;
+  width :700px;
+  height: 250px;
   display: flex;
+  align-items: center;
+  justify-content: center;
+  position:relative;
 }
 
 .countdown-unit {
   display: flex;
+  position: absolute;
   flex-direction: column;
   align-items: center;
   margin: 0px 30px;
+}
+
+.days-box {
+  left: 30px;
+}
+
+.hours-box {
+  left: 205px;
+}
+
+.minutes-box {
+  right: 205px;
+}
+
+.seconds-box {
+  right: 30px;
 }
 
 .days,
