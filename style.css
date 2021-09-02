@@ -9,7 +9,9 @@ body {
 #app {
   height: 100vh;
   background-position: bottom;
-  background-image: url("img/bns-background.jpg");
+  background-image: url("img/background.jpg");
+  background-size:cover;
+  background-repeat:no-repeat;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -19,10 +21,10 @@ body {
 .countdown-box {
   font-family: "Black Ops One", sans-serif;
   color: var(--font-color);
-  background: linear-gradient(
-    0deg,
-    rgba(var(--bg-main-color), 0.9) 0%,
-    rgba(var(--bg-main-color), 0) 100%
+  background: radial-gradient(
+    circle,
+    rgba(var(--bg-main-color), 0.5) 75%,
+    rgba(var(--bg-main-color), 0) 90%
   );
   width: 530px;
   height: 250px;
@@ -36,7 +38,6 @@ body {
 
 .countdown-unit {
   display: flex;
-  /* position: absolute; */
   flex-direction: column;
   align-items: center;
   justify-content: center;
