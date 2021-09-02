@@ -73,6 +73,7 @@ body {
 
 #date-input,
 #time-input {
+  cursor: text;
   width: 100%;
   font-size: 20px;
   background-color: rgb(var(--bg-main-color));
