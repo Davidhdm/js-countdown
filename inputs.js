@@ -69,12 +69,22 @@ timeInputBox.addEventListener('mouseleave', () => {
   }
 })
 
-let fullInputValue = null
+/* let fullInputValue = null
 
-if (!timeInput.value) {
-  fullInputValue = dateInput.value
-} else {
-  fullInputValue = dateInput.value + 'T' + timeInput.value
+window.onload = () => {
+  const form = document.querySelector('form')
+
+  form.onsubmit = (event) => {
+    event.preventDefault()
+    if (!timeInput.value) {
+      fullInputValue = dateInput.value
+    } else {
+      fullInputValue = dateInput.value + 'T' + timeInput.value
+    }
+  }
+}*/
+
+export {
+  dateInput,
+  timeInput
 }
-
-export default fullInputValue

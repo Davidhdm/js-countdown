@@ -1,18 +1,31 @@
-import fullInputValue from './inputs.js'
-console.log(fullInputValue)
+import { dateInput, timeInput } from './inputs.js'
 
-let countdownTime = null
+let countdownTime = ''
+let inputData = ''
 
-if (fullInputValue.length > 6) {
-  countdownTime = new Date(fullInputValue)
-} else {
-  countdownTime = new Date('09/08/2021 23:59:59')
+window.onload = () => {
+  const form = document.querySelector('.form')
+  form.onsubmit = (event) => {
+    event.preventDefault()
+    if (!timeInput.value) {
+      inputData = dateInput.value
+    } else {
+      inputData = dateInput.value + 'T' + timeInput.value
+    }
+
+    if (inputData.length > 6) {
+      countdownTime = new Date(inputData).getTime()
+    }
+  }
 }
 
-console.log(countdownTime)
-
 let countdown = setInterval(() => {
-  let currentTime = new Date()
+
+  if (!countdownTime) {
+    countdownTime = new Date('09/08/2021 23:59:59').getTime()
+  }
+
+  let currentTime = new Date().getTime()
   let timeLeft = countdownTime - currentTime
 
   if (timeLeft < 0) {
@@ -26,11 +39,10 @@ let countdown = setInterval(() => {
 
   document.querySelector('.days').innerHTML = days || 0
   document.querySelector('.hours').innerHTML = hours || 0
-  document.querySelector('.minutes').innerHTML = minutes || 0 
+  document.querySelector('.minutes').innerHTML = minutes || 0
   document.querySelector('.seconds').innerHTML = seconds || 0
 
   if (timeLeft <= 0) {
     clearInterval(countdown)
-    document.querySelector('countdown-box').innerHTML = 'ADIOS!'
   }
 }, 1000)
