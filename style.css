@@ -107,6 +107,7 @@ body {
 }
 
 .submitBtn {
+  font-weight: 700;
   border-radius: 5px;
   background-color: rgb(var(--bg-main-color));
   color: var(--font-color);
