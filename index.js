@@ -42,7 +42,6 @@ let countdown = setInterval(() => {
   document.querySelector('.minutes').innerHTML = minutes || 0
   document.querySelector('.seconds').innerHTML = seconds || 0
 
-  if (timeLeft <= 0) {
-    clearInterval(countdown)
-  }
+  const printSecondsLeft = parseInt(timeLeft / 1000) + ' seconds left'
+  console.log(printSecondsLeft)
 }, 1000)
