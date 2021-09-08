@@ -22,7 +22,7 @@ window.onload = () => {
 let countdown = setInterval(() => {
 
   if (!countdownTime) {
-    countdownTime = new Date('09/08/2021 23:59:59').getTime()
+    countdownTime = new Date('09/09/2021 03:00:00').getTime()
   }
 
   let currentTime = new Date().getTime()
